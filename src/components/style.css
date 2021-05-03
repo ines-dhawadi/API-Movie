@@ -1,0 +1,57 @@
+body{
+    background-image: url('https://classiccinemaonline.com/templates/rt_metropolis/images/backgrounds/space/top-image.jpg');
+   background-attachment: fixed;
+font-family: Arial, Helvetica, sans-serif;
+overflow-x: hidden;
+  overflow-y:scroll ;
+
+}
+
+.imgfilm{
+    width: 20rem;
+height: 15rem;
+    border-top-left-radius: 9%;
+    border-top-right-radius: 9%;
+}
+
+.carete{
+    width: 20rem;
+    margin-bottom: 3rem;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    box-shadow:  8px gray;
+   
+}
+
+.actorts{
+    font-size: 13px;
+}
+.ligniere{
+    display: flex;
+}
+.lescard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgba(5, 5, 5, 0.384);
+}
+
+.bg-light {
+    background-color:transparent !important;
+    width: 100%;
+    color: white;
+
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(248, 244, 244, 0.5)!important;
+    margin-left: 5rem;
+    font-size: 20px;
+
+}
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+    color: rgba(248, 244, 244, 0.5)!important;
+    font-size: 18px;
+}
+.navbar-nav{
+    margin-left: 12rem;
+}

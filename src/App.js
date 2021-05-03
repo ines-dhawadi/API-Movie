@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import  "./App.css";
+import './components/style.css';
+import Film from './components/film';
+import { Container,Row,Col } from "react-bootstrap";
+import Nnabarr from "./components/navbatt";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+<Nnabarr />
+      <div className=" container lescard">
+          <Film />
+      </div>
+ <img src="heart.png" />
     </div>
   );
 }
