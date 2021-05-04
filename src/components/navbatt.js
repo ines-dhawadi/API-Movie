@@ -7,9 +7,10 @@ function Nnabarr() {
     
 
   return(
-    <div className=" container-fluid col-md-12">
+    <div>
+    <div className=" container-fluid col-md-12 navvvv">
         <Navbar bg="light" expand="lg">
-  <Navbar.Brand href="#home"><img src="clapper.png" /></Navbar.Brand>
+  <Navbar.Brand href="#home"><img className="logo" src="https://baptistedrapeau.files.wordpress.com/2019/02/logo-cave-c3a0-film-rond-blanc-noir.png" /></Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
@@ -24,8 +25,12 @@ function Nnabarr() {
     </Form>
   </Navbar.Collapse>
 </Navbar>
+<div className="grantitre">
+    <p  className="titre"> <span>This site<br></br>  </span>   offers a list <br></br> of 1150 </p>
+  </div>
     </div>
-   )
+
+    </div>)
 
  }
 
