@@ -49,7 +49,7 @@ function Film() {
 
 <div className="grid">
 			<figure className="effect-oscar">
-				<img src={el.Images[0]} alt="img09"/>
+				<img className="imgcartop" src={el.Images[0]} alt="img09"/>
 				<figcaption>
 					<h2>{el.Title}</h2>
 					<p>{el.Actors}</p>

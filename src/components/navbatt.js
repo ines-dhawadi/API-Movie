@@ -1,6 +1,7 @@
 import React from 'react'
 import  "../components/style.css";
 import { Navbar,FormControl,Button,Nav,Form } from "react-bootstrap";
+import {Link} from "react-router-dom"
 
 
 function Nnabarr() {
@@ -14,9 +15,9 @@ function Nnabarr() {
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#link">Link</Nav.Link>
-       <Nav.Link href="#link"> <img src="heart.png" /> favored</Nav.Link>
+      <Link   to="/">Home</Link>
+      <Link to="/about">Link</Link>
+       <Link to="/favored"> <img src="heart.png" /> favored</Link>
       
     </Nav>
     <Form inline>
@@ -25,9 +26,12 @@ function Nnabarr() {
     </Form>
   </Navbar.Collapse>
 </Navbar>
+
 <div className="grantitre">
-    <p  className="titre"> <span>This site<br></br>  </span>   offers a list <br></br> of 1150 </p>
+    <p  className="titre"> <span>This site  offers <br></br>a list of 1150  </span>   </p> <br></br> 
+    <Button className="bbbttt" variant="light">Light</Button>
   </div>
+ 
     </div>
 
     </div>)
