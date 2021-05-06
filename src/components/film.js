@@ -1,7 +1,7 @@
 import  {useState, useEffect} from 'react'
 import '../components/style.css'
 
-import {Card} from "react-bootstrap";
+
 
 
 
@@ -43,24 +43,30 @@ function Film() {
    )*/
 
 
-   return(
-    film.map(el=>
-    <div>
+   return(film.map(el=>
+    <div className="cwartttet">
 
-<div className="grid">
-			<figure className="effect-oscar">
-				<img className="imgcartop" src={el.Images[0]} alt="img09"/>
-				<figcaption>
-					<h2>{el.Title}</h2>
-					<p>{el.Actors}</p>
-          <div > <p > <b>Language :</b> {el.Language}</p></div>
-      <div > <p> <br></br> <b className="number">{el.imdbRating}</b>  <img className="startt" src="star.png" /> </p></div>
-					<a href="#">View more</a>
-				</figcaption>			
-			</figure>
-		
-		</div>
+
+
+ 
+ <div className="card">
+    <div className="image">
+      <img  src={el.Images[0]}/>
     </div>
+    <div className="details">
+      <div className="center">
+        <h1>{el.Title}<br></br><span>{el.Actors}</span></h1>
+        <p><b>Language :</b> {el.Language}</p>
+        <ul >
+         
+          <li>Add to  <a href="#"><img  src="./heart.png" /></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    
+    </div>
+    
    ))
 
 

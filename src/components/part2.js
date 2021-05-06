@@ -1,5 +1,6 @@
 import React from 'react'
 import  { Carousel, Container,Row,Col } from "react-bootstrap";
+import  "../components/style.css";
 
 
 
@@ -8,6 +9,23 @@ function Part2() {
 
   return(
     <div>
+
+<div className="cntainer-fluid">
+  <div className="row paragtop" >
+
+<h6>INCLUDED IN ALL PLANS <br></br>
+    <span  className="titreh1" >All The TV You Love</span></h6>
+    <p className="descp">Stream full seasons of exclusive series, current-season episodes, hit movies, Hulu Originals, kids shows, and more.</p>
+
+  </div>
+
+</div>
+
+
+
+
+
+
 
 {/***  <Container className="container">
         <Row>

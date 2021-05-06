@@ -16,8 +16,8 @@ function Nnabarr() {
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
       <Link   to="/">Home</Link>
-      <Link to="/about">Link</Link>
-       <Link to="/favored"> <img src="heart.png" /> favored</Link>
+      <Link to="/about">About</Link>
+       <Link to="/favored"> <img src="./heart.png" /> favored</Link>
       
     </Nav>
     <Form inline>
