@@ -22,7 +22,7 @@ function Home  () {
    {/* <Part11 /> */}
  <Nnabarr handelSearch={handelSearch}/>
       <Part2/>
-      <SearchBox />
+      <SearchBox handelSearch={handelSearch}/>
 
        <div className=" container-fliud lescard">
           <Film search={search} />

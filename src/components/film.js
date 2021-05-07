@@ -67,7 +67,11 @@ function Film({search}) {
     </div>
   </div>
     
-    </div>
+   <img className="playy" src="../images/play.png" />
+   <img className="freeic" src="../images/free.png" />
+   
+   </div>
+   
     
    ):
    film.filter(el=>
