@@ -1,11 +1,12 @@
-import React from 'react'
+
 import  "../components/style.css";
 import { Navbar,FormControl,Button,Nav,Form } from "react-bootstrap";
 import {Link} from "react-router-dom"
+import React from 'react'
 
 
-function Nnabarr() {
-    
+function Nnabarr({handelSearch}) {
+ 
 
   return(
     <div>
@@ -21,8 +22,8 @@ function Nnabarr() {
       
     </Nav>
     <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-danger">Search</Button>
+      <FormControl type="text" placeholder="Search" className="mr-sm-2"  onChange={handelSearch} />
+      <Button variant="outline-danger"  >Search</Button>
     </Form>
   </Navbar.Collapse>
 </Navbar>

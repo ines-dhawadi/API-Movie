@@ -6,7 +6,7 @@ import '../components/style.css'
 
 
 
-function Film() {
+function Film({search}) {
   const [film, setfilm] = useState([])  
 
   const getFilm=()=>{
@@ -43,7 +43,9 @@ function Film() {
    )*/
 
 
-   return(film.map(el=>
+   return(
+    search===''?
+    film.map(el=>
     <div className="cwartttet">
 
 
@@ -67,7 +69,35 @@ function Film() {
     
     </div>
     
-   ))
+   ):
+   film.filter(el=>
+    el.Title.toLowerCase().includes(search.toLowerCase())).map(el=>
+    <div className="cwartttet">
+
+
+
+ 
+ <div className="card">
+    <div className="image">
+      <img  src={el.Images[0]}/>
+    </div>
+    <div className="details">
+      <div className="center">
+        <h1>{el.Title}<br></br><span>{el.Actors}</span></h1>
+        <p><b>Language :</b> {el.Language}</p>
+        <ul >
+         
+          <li>Add to  <a href="#"><img  src="./heart.png" /></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    
+    </div>
+    
+   )
+   
+   )
 
 
  }

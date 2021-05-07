@@ -1,20 +1,31 @@
-import React from 'react'
+
+
 import Film from './film';
-import Part11 from './Part1';
+
 import Part2 from './part2';
 import SearchBox from './SearchBox';
+import React, {useState} from 'react'
+import Nnabarr from './navbatt';
 
 
 
 function Home  () {
+
+  const[search, setSearch]= useState("");
+  const handelSearch =(event)=>{
+    let value =event.target.value
+    setSearch(value)
+  }
+  console.log(search)
   return(
     <div>
-     <Part11 />
+   {/* <Part11 /> */}
+ <Nnabarr handelSearch={handelSearch}/>
       <Part2/>
       <SearchBox />
 
        <div className=" container-fliud lescard">
-          <Film />
+          <Film search={search} />
       </div>
 
 

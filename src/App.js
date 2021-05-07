@@ -2,7 +2,7 @@ import  "./App.css";
 import './components/style.css';
 import Film from './components/film';
 // import { } from "react-bootstrap";
-import Nnabarr from "./components/navbatt";
+
 import Footer from "./components/footer";
 import Part2 from "./components/part2";
 import {BrowserRouter as Router,Route  } from "react-router-dom";
@@ -14,7 +14,7 @@ function App() {
     <div className="App">
 
 <Router>
-<Nnabarr />
+
 <Route exact path="/"  component={Home} />
 {/* <Route  path="/"  component={non de componen} /> */}
 <Route  path="/favored"  component={Favor} />
