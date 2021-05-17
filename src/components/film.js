@@ -1,17 +1,18 @@
 import  {useState, useEffect} from 'react'
 import '../components/style.css'
+import {Button} from 'react-bootstrap'
 
 
 
 
 
 
-function Film({search}) {
-  const [film, setfilm] = useState([])  
+function Film({search,getFavorites,getFavoritMovies}) {
+  const [film, setFilm] = useState([])  
 
   const getFilm=()=>{
       fetch('film.json').then(Response => Response.json()).then
-                         (lesfilm => setfilm(lesfilm));
+                         (lesfilm => setFilm(lesfilm));
  }
 
 
@@ -60,8 +61,8 @@ function Film({search}) {
         <h1>{el.Title}<br></br><span>{el.Actors}</span></h1>
         <p><b>Language :</b> {el.Language}</p>
         <ul >
-         
-          <li>Add to  <a href="#"><img  src="./heart.png" /></a></li>
+         {/* wrapper function */}
+          <li>Add to  <Button onClick={()=>{ getFavorites(); getFavoritMovies(el)}}><img  src="./heart.png" /></Button></li>
         </ul>
       </div>
     </div>

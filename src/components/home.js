@@ -9,7 +9,7 @@ import Nnabarr from './navbatt';
 
 
 
-function Home  () {
+function Home  ({favorites,getFavorites,getFavoritMovies}) {
 
   const[search, setSearch]= useState("");
   const handelSearch =(event)=>{
@@ -20,12 +20,12 @@ function Home  () {
   return(
     <div>
    {/* <Part11 /> */}
- <Nnabarr handelSearch={handelSearch}/>
+ <Nnabarr handelSearch={handelSearch} favorites={favorites}/>
       <Part2/>
       <SearchBox handelSearch={handelSearch}/>
 
        <div className=" container-fliud lescard">
-          <Film search={search} />
+          <Film search={search} getFavorites={getFavorites} getFavoritMovies={getFavoritMovies} />
       </div>
 
 

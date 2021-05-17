@@ -39,6 +39,17 @@ height: 15rem;
    
 }
 
+
+.val-favorite{
+    background-color: white;
+    border-radius: 50%;
+    color: black;
+    font-size: 20px;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    margin-top: 0.2rem;
+ 
+}
 .actorts{
     font-size: 13px;
 }

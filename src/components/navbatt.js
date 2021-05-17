@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 import React from 'react'
 
 
-function Nnabarr({handelSearch}) {
+function Nnabarr({handelSearch,favorites}) {
  
 
   return(
@@ -18,7 +18,7 @@ function Nnabarr({handelSearch}) {
     <Nav className="mr-auto">
       <Link   to="/">Home</Link>
       <Link to="/about">About</Link>
-       <Link to="/favored"> <img src="./heart.png" /> favored</Link>
+       <Link to="/favored"><img src="./heart.png" /> <span className="val-favorite"> {favorites}</span></Link>
       
     </Nav>
     <Form inline>
