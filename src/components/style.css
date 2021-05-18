@@ -381,13 +381,11 @@ li {
     list-style: none;
 }
 .innnicoon{
-    width: 7rem;
-    height: 7rem;
+    width: 5rem;
+    height: 5rem;
 }
 
-.ooooooffff{
-   
-}
+
 
 .freeic{
     position: relative;
@@ -407,3 +405,5 @@ li {
     color: white;
     margin-top: 5rem;
 }
+
+/**************************************************/

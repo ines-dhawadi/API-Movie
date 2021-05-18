@@ -1,12 +1,16 @@
 import React from 'react'
 import Part11 from './Part1';
+import Nnabarr from './navbatt';
+import  "../components/style.css";
+import { Container } from 'react-bootstrap';
 
-
-
-const Favor = ({favoritMovie}) => {
+const Favor = ({favoritMovie, favorites, handelSearch}) => {
   return(
     <div>
+       <Nnabarr   handelSearch={handelSearch} favorites={favorites}/>
        <Part11 />
+
+       <div className="container d-flex flex-wrap mt-5">
        {
          favoritMovie.map(el=>
           <div className="cwartttet">
@@ -14,7 +18,7 @@ const Favor = ({favoritMovie}) => {
       
       
        
-       <div className="card">
+       <div className="card ms-3">
           <div className="image">
             <img  src={el.Images[0]}/>
           </div>
@@ -37,6 +41,9 @@ const Favor = ({favoritMovie}) => {
           
          )
        }
+
+</div>
+       
         
     </div>
    )
