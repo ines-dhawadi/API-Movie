@@ -3,6 +3,7 @@ import Part11 from './Part1';
 import Nnabarr from './navbatt';
 import  "../components/style.css";
 import { Container } from 'react-bootstrap';
+import Footer from "./footer";
 
 const Favor = ({favoritMovie, favorites, handelSearch}) => {
   return(
@@ -44,7 +45,7 @@ const Favor = ({favoritMovie, favorites, handelSearch}) => {
 
 </div>
        
-        
+   <Footer />     
     </div>
    )
 

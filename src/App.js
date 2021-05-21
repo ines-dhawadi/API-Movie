@@ -3,14 +3,15 @@ import './components/style.css';
 import Film from './components/film';
 // import { } from "react-bootstrap";
 
-import Footer from "./components/footer";
+
 import Part2 from "./components/part2";
 import {BrowserRouter as Router,Route  } from "react-router-dom";
 import Favor from "./components/favored";
 import Home from "./components/home";
 import { useState,useEffect } from "react";
+import Dashbord from "./components/dashbord";
 
-function App() {
+function App({film,handleChange,search}) {
 //-----------------fetch  json
 //   const [film, setFilm] = useState([])  
 
@@ -49,7 +50,10 @@ console.log(favoritMovie)
 <Route exact path="/"   ><Home favorites={favorites} getFavorites={getFavorites} getFavoritMovies={getFavoritMovies} /> </Route>
 {/* <Route  path="/"  component={non de componen} /> */}
 <Route  path="/favored"   > <Favor favorites={favorites} favoritMovie={favoritMovie} getFavoritMovies={getFavoritMovies} /> </Route>
-<Footer />
+
+<Route path="/admin" ><Dashbord handleChange={handleChange} search={search} film={film}/></Route>
+
+
 </Router>
 
 

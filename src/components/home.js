@@ -6,6 +6,7 @@ import Part2 from './part2';
 import SearchBox from './SearchBox';
 import React, {useState} from 'react'
 import Nnabarr from './navbatt';
+import Footer from "./footer";
 
 
 
@@ -29,7 +30,7 @@ function Home  ({favorites,getFavorites,getFavoritMovies}) {
       </div>
 
 
-
+      <Footer />
     </div>
    )
 

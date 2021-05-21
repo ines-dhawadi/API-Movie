@@ -2,13 +2,21 @@ import  {useState, useEffect} from 'react'
 import '../components/style.css'
 import {Button} from 'react-bootstrap'
 import axios from "axios"
+import Cont from './copdash';
+import Nnabarr from './navbatt';
 
 
 
 
 
 
-function Film({search,getFavorites,getFavoritMovies}) {
+function Dashbord({favorites}) {
+
+    // const[search, setSearch]= useState("");
+    // const handelSearch =(event)=>{
+    //   let value =event.target.value
+    //   setSearch(value)
+    // }
   const [film, setFilm] = useState([])  
 
   const getFilm=()=>{
@@ -21,51 +29,23 @@ function Film({search,getFavorites,getFavoritMovies}) {
 
  useEffect(()=>{getFilm()},[])
 
+ const[search, setSearch]= useState("");
+ const handelSearch =(event)=>{
+   let value =event.target.value
+   setSearch(value)
+ }
+ console.log(search)
 
-
- /************************************* */
-//  const [Movie,setMovie]= useState([])
-//  const getMovie=()=> {
-//      axios.get('http://localhost:3004/posts').then((response) => {
-       
-//          setMovie( response.data);
-        
-//        });
-
-//  }
-//  useEffect(()=>{getMovie()},[])
-
-
-
-
-   
-
-
-
-
-
-  /*return(
-    film.map(el=>
-    <div className="cwartttet">
-<Card className="carete">
-  <Card.Img className="imgfilm" variant="top" src={el.Images[0]} />
-  <Card.Body>
-    <Card.Title className="text-center">{el.Title}</Card.Title>
-    <Card.Text>
-      <p className="actorts"> <b>Actors :</b>  {el.Actors}</p>
-      <div > <p className="actorts"> <b>Language :</b> {el.Language}</p></div>
-      <div > <p className="text-center"> {el.imdbRating} <img src="star.png" /> </p></div>
-     
-    </Card.Text>
-   
-  </Card.Body>
-</Card>
-    </div>)
-   )*/
+ 
 
 
    return(
-    search===''?
+
+<div>
+<Nnabarr  favorites={favorites}/>
+<Cont  />
+
+    {search===''?
     film.map(el=>
     <div className="cwartttet">
 
@@ -74,7 +54,7 @@ function Film({search,getFavorites,getFavoritMovies}) {
  
  <div className="card">
     <div className="image">
-      <img  src={el.Images}/>
+      <img  src={el.Images[0]}/>
     </div>
     <div className="details">
       <div className="center">
@@ -82,13 +62,13 @@ function Film({search,getFavorites,getFavoritMovies}) {
         <p><b>Language :</b> {el.Language}</p>
         <ul >
          {/* wrapper function */}
-          <li>Add to  <Button onClick={()=>{ getFavorites(); getFavoritMovies(el)}}><img  src="./heart.png" /></Button></li>
+          <li>Add to  <Button ><img  src="./heart.png" /></Button></li>
         </ul>
       </div>
     </div>
   </div>
     
-   <img className="playy" src="../images/play.png" />
+  
    <img className="freeic" src="../images/free.png" />
    
    </div>
@@ -120,11 +100,12 @@ function Film({search,getFavorites,getFavoritMovies}) {
     
     </div>
     
-   )
-   
-   )
+   )}
+    
+   </div> )
 
 
  }
 
-export default Film
+export default Dashbord
+  
