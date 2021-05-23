@@ -60,7 +60,7 @@
   }
   
   a{
-    color: #212529!important;
+    color: #21229!important;
   }
   [tabindex="-1"]:focus {
     outline: 0 !important;
@@ -4580,10 +4580,10 @@
       flex-wrap: nowrap;
     }
   
-    .navbar-expand-lg .navbar-collapse {
+    .navbar-expand-lg  {
       display: flex !important;
       flex-basis: auto;
-      margin-top: -5rem;
+      margin-top: 0% !important;
     }
   
     .navbar-expand-lg .navbar-toggler {

@@ -21,7 +21,6 @@ width: 80rem;
 margin-bottom: 5rem;
 }
 
-
 .imgfilm{
     width: 20rem;
 height: 15rem;
@@ -78,6 +77,11 @@ height: 15rem;
 
 
 }
+.navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+   
+  }
 a{
    
     color: rgba(248, 244, 244, 0.5)!important;
