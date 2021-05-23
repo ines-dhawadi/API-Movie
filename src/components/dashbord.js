@@ -2,8 +2,9 @@ import  {useState, useEffect} from 'react'
 import '../components/style.css'
 import {Button} from 'react-bootstrap'
 import axios from "axios"
-import Cont from './copdash';
-import Nnabarr from './navbatt';
+// import Cont from './copdash';
+// import Nnabarr from './navbatt';
+import {  Form,Modal } from "react-bootstrap";
 
 
 
@@ -37,44 +38,31 @@ function Dashbord({favorites}) {
  console.log(search)
 
  
+//****************************delet */
+const deleteRow=(id, e)=>{  
 
+  axios.delete(`http://localhost:3005/posts/${id}`)  
+    .then(response => {  
+      console.log("response: hahaha", response);
+    }) 
+    .catch(err=> 
+      console.log(err)
+    );
+  }
+    
+/************************function modal */
+const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
    return(
 
 <div>
-<Nnabarr  favorites={favorites}/>
-<Cont  />
+{/* <Nnabarr handelSearch={handelSearch} favorites={favorites}/>
+<Cont  /> */}
 
-    {search===''?
-    film.map(el=>
-    <div className="cwartttet">
-
-
-
- 
- <div className="card">
-    <div className="image">
-      <img  src={el.Images[0]}/>
-    </div>
-    <div className="details">
-      <div className="center">
-        <h1>{el.Title}<br></br><span>{el.Actors}</span></h1>
-        <p><b>Language :</b> {el.Language}</p>
-        <ul >
-         {/* wrapper function */}
-          <li>Add to  <Button ><img  src="./heart.png" /></Button></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-    
-  
-   <img className="freeic" src="../images/free.png" />
-   
-   </div>
-   
-    
-   ):
+    {
    film.filter(el=>
     el.Title.toLowerCase().includes(search.toLowerCase())).map(el=>
     <div className="cwartttet">
@@ -84,7 +72,7 @@ function Dashbord({favorites}) {
  
  <div className="card">
     <div className="image">
-      <img  src={el.Images[0]}/>
+      <img  src={el.Images}/>
     </div>
     <div className="details">
       <div className="center">
@@ -92,15 +80,96 @@ function Dashbord({favorites}) {
         <p><b>Language :</b> {el.Language}</p>
         <ul >
          
-          <li>Add to  <a href="#"><img  src="./heart.png" /></a></li>
+          <li id="upd-supp" >
+           {/* ********************madal updt *********************  */}
+            
+           
+          
+          {/* ********************modal********************* */}
+
+    <>
+      
+      <img  id="bnt-updt"  onClick={handleShow} src="./pen.png" />
+      
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Vous pouvez éditer ce film</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+{/* ************************************* */}
+<div>
+
+<Form  className="">
+
+<Form.Group controlId="formGroupPassword">
+    {/* <Form.Label>Titre de votre film</Form.Label> */}
+    <Form.Control    name="Title"  type="text" placeholder="Modifier le titre de votre film" />
+    </Form.Group>
+
+
+  <Form.Group controlId="formGroupEmail">
+    {/* <Form.Label>Langue de votre film</Form.Label> */}
+    <Form.Control  name="Language" type="text" placeholder="Modifier la langue de votre film" />
+  </Form.Group>
+
+
+  <Form.Group controlId="formGroupPassword">
+    {/* <Form.Label>Acteur  de votre film</Form.Label> */}
+    <Form.Control    name="Actors"  type="text" placeholder="Modifier le nom de votre acteur de film" />
+  </Form.Group>
+
+  <Form.Group controlId="formGroupPassword">
+    {/* <Form.Label>Image</Form.Label> */}
+    <Form.Control   name="Images"  type="text" placeholder="Modifier l'URL de l'image" />
+  </Form.Group>
+  <Button type="submit">  Valider</Button>
+</Form>
+
+
+</div>
+{/* ********************************* */}
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+          
+Fermer
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+          Modifier
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+ 
+
+
+{/* ******************** END modal********************* */}
+
+          
+            {/* ******************** end madal updt *********************  */}
+          
+          
+          
+          
+          
+          
+           <a href="#">  <img  onClick={(e) => deleteRow(el.id, e)} src="./delete.png" />  </a></li>
         </ul>
+        
       </div>
     </div>
   </div>
-    
+ 
     </div>
     
    )}
+{/* ********************New card******************** */}
+
+
+
+
+
     
    </div> )
 

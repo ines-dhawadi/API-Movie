@@ -1,15 +1,23 @@
 import  "./App.css";
 import './components/style.css';
-import Film from './components/film';
+// import Film from './components/film';
 // import { } from "react-bootstrap";
 
 
-import Part2 from "./components/part2";
+// import Part2 from "./components/part2";
 import {BrowserRouter as Router,Route  } from "react-router-dom";
 import Favor from "./components/favored";
 import Home from "./components/home";
-import { useState,useEffect } from "react";
+import { useState} from "react";
 import Dashbord from "./components/dashbord";
+// import Dashb from "./components/Dash1";
+import Newdash from "./components/newdash";
+import User from './components/user';
+
+
+
+
+
 
 function App({film,handleChange,search}) {
 //-----------------fetch  json
@@ -29,7 +37,8 @@ function App({film,handleChange,search}) {
   const [favorites,setFavorites]=useState(0)
  const getFavorites=()=>{
     setFavorites(favorites+1)
-  }
+ }
+  console.log('favrt', favorites)
 
 
   //----------------Add getFavoritMovies
@@ -51,9 +60,11 @@ console.log(favoritMovie)
 {/* <Route  path="/"  component={non de componen} /> */}
 <Route  path="/favored"   > <Favor favorites={favorites} favoritMovie={favoritMovie} getFavoritMovies={getFavoritMovies} /> </Route>
 
-<Route path="/admin" ><Dashbord handleChange={handleChange} search={search} film={film}/></Route>
+{/* <Route path="/admin" ><Dashbord favorites={favorites} handleChange={handleChange} search={search} film={film}/></Route> */}
+{/* <Route path="/dachbord"><Dashbord favorites={favorites} handleChange={handleChange} search={search} film={film}/> </Route> */}
+<Route path="/Dashb">< Newdash/></Route>
 
-
+<Route path="/user"><User/></Route>
 </Router>
 
 

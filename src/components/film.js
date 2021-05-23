@@ -65,36 +65,7 @@ function Film({search,getFavorites,getFavoritMovies}) {
 
 
    return(
-    search===''?
-    film.map(el=>
-    <div className="cwartttet">
-
-
-
- 
- <div className="card">
-    <div className="image">
-      <img  src={el.Images}/>
-    </div>
-    <div className="details">
-      <div className="center">
-        <h1>{el.Title}<br></br><span>{el.Actors}</span></h1>
-        <p><b>Language :</b> {el.Language}</p>
-        <ul >
-         {/* wrapper function */}
-          <li>Add to  <Button onClick={()=>{ getFavorites(); getFavoritMovies(el)}}><img  src="./heart.png" /></Button></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-    
-   <img className="playy" src="../images/play.png" />
-   <img className="freeic" src="../images/free.png" />
    
-   </div>
-   
-    
-   ):
    film.filter(el=>
     el.Title.toLowerCase().includes(search.toLowerCase())).map(el=>
     <div className="cwartttet">
@@ -112,7 +83,7 @@ function Film({search,getFavorites,getFavoritMovies}) {
         <p><b>Language :</b> {el.Language}</p>
         <ul >
          
-          <li>Add to  <a href="#"><img  src="./heart.png" /></a></li>
+          <li>Add to  <a href="#"><img  onClick={()=>getFavorites() ,getFavoritMovies(el)} src="./heart.png" /></a></li>
         </ul>
       </div>
     </div>

@@ -6,7 +6,7 @@ overflow-x: hidden;
   overflow-y:scroll ;
   margin: 0%;
   padding: 0%;
- background-color: black;
+ background-color: black !important;
 
 }
 .navvvv{
@@ -407,3 +407,15 @@ li {
 }
 
 /**************************************************/
+
+#bnt-updt{
+    background-color: transparent;
+  }
+
+  #bnt-updt:hover{
+      border: 1px solid #e90101 ;
+  }
+  #upd-supp{
+      height: 3rem;
+      padding: 0.5rem;
+  }
