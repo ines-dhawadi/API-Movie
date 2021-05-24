@@ -1,7 +1,7 @@
 import React from 'react';
 import "../components/newdash.css"
 
-
+import { Link } from "react-router-dom";
 
 
 
@@ -22,11 +22,11 @@ const User = (props) => {
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboard.html">
+        <li class="nav-item active  ">
+            <a class="nav-link" href="./dashboard.html"><Link to="/Dashb">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
-            </a>
+              </Link> </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" to="/user">

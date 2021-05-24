@@ -9,7 +9,7 @@ import {BrowserRouter as Router,Route  } from "react-router-dom";
 import Favor from "./components/favored";
 import Home from "./components/home";
 import { useState} from "react";
-import Dashbord from "./components/dashbord";
+// import Dashbord from "./components/dashbord";
 // import Dashb from "./components/Dash1";
 import Newdash from "./components/newdash";
 import User from './components/user';
@@ -43,7 +43,7 @@ function App({film,handleChange,search}) {
 
   //----------------Add getFavoritMovies
 
-  const [favoritMovie,setFavoritMovies]=useState([])
+  const [favoritMovie,setFavoritMovie]=useState([])
 
 const getFavoritMovies=(e)=>{
 

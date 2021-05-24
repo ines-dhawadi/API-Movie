@@ -423,3 +423,9 @@ li {
       height: 3rem;
       padding: 0.5rem;
   }
+
+  #row-card-dashb{
+      display: flex  !important;
+      flex-wrap: wrap !important;
+      justify-content: space-evenly !important;
+  }

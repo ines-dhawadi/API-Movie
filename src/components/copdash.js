@@ -4,7 +4,7 @@ import { Button, Form,Modal } from "react-bootstrap";
 
 
 
-function Cont({handelSearch}){
+function Cont(){
 
     const[input,setInput]=useState(
       {Title :"",

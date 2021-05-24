@@ -4,14 +4,17 @@ import {Button} from 'react-bootstrap'
 import axios from "axios"
 // import Cont from './copdash';
 // import Nnabarr from './navbatt';
-import {  Form,Modal } from "react-bootstrap";
+
+import Updat from './updat';
 
 
 
 
 
 
-function Dashbord({favorites}) {
+function Dashbord({handleChanget,el,input2,favorites}) {
+
+  
 
     // const[search, setSearch]= useState("");
     // const handelSearch =(event)=>{
@@ -49,16 +52,28 @@ const deleteRow=(id, e)=>{
       console.log(err)
     );
   }
-    
-/************************function modal */
-const [show, setShow] = useState(false);
+// *************************axios.put*********************
+// const updatRow=(id)=>{  
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+//   axios.put(`http://localhost:3005/posts/${id}`,input2)  
+//     .then(response => {  
+//       setInput2(response.data);})
+     
+    
+//     }
+//     console.log("response: updat", input2)
+//     // .catch(err=> 
+//     //   console.log(err)
+//     // );
+  
+//   useEffect(()=>{updatRow()},[])
+
+
+
 
    return(
 
-<div>
+<div id="row-card-dashb" >
 {/* <Nnabarr handelSearch={handelSearch} favorites={favorites}/>
 <Cont  /> */}
 
@@ -82,72 +97,10 @@ const [show, setShow] = useState(false);
          
           <li id="upd-supp" >
            {/* ********************madal updt *********************  */}
-            
+            <Updat  input2={input2} el={el} deleteRow={deleteRow} handleChanget={handleChanget}  />
            
           
-          {/* ********************modal********************* */}
-
-    <>
-      
-      <img  id="bnt-updt"  onClick={handleShow} src="./pen.png" />
-      
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Vous pouvez éditer ce film</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-{/* ************************************* */}
-<div>
-
-<Form  className="">
-
-<Form.Group controlId="formGroupPassword">
-    {/* <Form.Label>Titre de votre film</Form.Label> */}
-    <Form.Control    name="Title"  type="text" placeholder="Modifier le titre de votre film" />
-    </Form.Group>
-
-
-  <Form.Group controlId="formGroupEmail">
-    {/* <Form.Label>Langue de votre film</Form.Label> */}
-    <Form.Control  name="Language" type="text" placeholder="Modifier la langue de votre film" />
-  </Form.Group>
-
-
-  <Form.Group controlId="formGroupPassword">
-    {/* <Form.Label>Acteur  de votre film</Form.Label> */}
-    <Form.Control    name="Actors"  type="text" placeholder="Modifier le nom de votre acteur de film" />
-  </Form.Group>
-
-  <Form.Group controlId="formGroupPassword">
-    {/* <Form.Label>Image</Form.Label> */}
-    <Form.Control   name="Images"  type="text" placeholder="Modifier l'URL de l'image" />
-  </Form.Group>
-  <Button type="submit">  Valider</Button>
-</Form>
-
-
-</div>
-{/* ********************************* */}
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-          
-Fermer
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-          Modifier
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </>
- 
-
-
-{/* ******************** END modal********************* */}
-
-          
-            {/* ******************** end madal updt *********************  */}
+     
           
           
           

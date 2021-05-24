@@ -83,7 +83,7 @@ function Film({search,getFavorites,getFavoritMovies}) {
         <p><b>Language :</b> {el.Language}</p>
         <ul >
          
-          <li>Add to  <a href="#"><img  onClick={()=>getFavorites() ,getFavoritMovies(el)} src="./heart.png" /></a></li>
+          <li>Add to  <a href="#"><img  onClick={()=>{getFavorites() ;getFavoritMovies(el)}} src="./heart.png" /></a></li>
         </ul>
       </div>
     </div>

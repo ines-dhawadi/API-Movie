@@ -1,15 +1,18 @@
 import React from 'react';
+import { Col , Row} from 'react-bootstrap';
 import "../components/newdash.css"
 import Cont from './copdash';
 import Dashbord from './dashbord';
 import User from './user';
+import {Link} from "react-router-dom"
+import  {useState} from 'react'
 
 
 
 
+const Newdash = () => {
 
 
-const Newdash = (props) => {
   return(
     <div>
         <div class="wrapper ">
@@ -25,17 +28,18 @@ const Newdash = (props) => {
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboard.html">
+            <a class="nav-link" href="./dashboard.html"><Link to="/newdash">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
-            </a>
+              </Link> </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" to="/user">
+            
+            <a class="nav-link" ><Link to="/user">
               <i class="material-icons">person</i>
               <p>User Profile</p>
               {/* <User/> */}
-            </a>
+              </Link> </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="./tables.html">
@@ -147,13 +151,13 @@ const Newdash = (props) => {
 </div>
 
           </div>
-          <div  id="card-dshb" className="row">
+          <Row  className="d-flex justify content-between">
           {/* ************* emplacement 2 */}
 
-          <div id="card-dshb">
-          <Dashbord />
-          </div>
-          </div>
+          <Col md={4} >
+          <Dashbord  />
+          </Col>
+          </Row>
           <div className="row  ">
     {/* ************* emplacement 2 */}
           </div>
