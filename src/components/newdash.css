@@ -6486,7 +6486,7 @@
   }
   
   .bg-light {
-    background-color:black !important;
+    background-color:rgba(0, 0, 0, 0.966) !important;
   }
   
   a.bg-light:hover,

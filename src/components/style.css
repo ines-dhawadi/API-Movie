@@ -11,14 +11,16 @@ overflow-x: hidden;
 }
 .navvvv{
    /* background-image: url('https://images.pexels.com/photos/6504669/pexels-photo-6504669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');*/
-   background-image: url('https://images-na.ssl-images-amazon.com/images/M/MV5BMTc0MjQzOTEwMV5BMl5BanBnXkFtZTcwMzE2NTIyMw@@._V1_SX1777_CR0,0,1777,947_AL_.jpg');
-background-repeat: no-repeat;
+   /* background-image: url('https://images-na.ssl-images-amazon.com/images/M/MV5BMTc0MjQzOTEwMV5BMl5BanBnXkFtZTcwMzE2NTIyMw@@._V1_SX1777_CR0,0,1777,947_AL_.jpg'); */
+background-image: url('https://images-na.ssl-images-amazon.com/images/M/MV5BMTUyNjkxOTk5NV5BMl5BanBnXkFtZTgwODAxMTc1ODE@._V1_SX1777_CR0,0,1777,744_AL_.jpg');
+   background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;
-height: 35rem;
+height: 38rem;
 width: 80rem;
-
+background-position: center;
 margin-bottom: 5rem;
+
 }
 
 .imgfilm{
@@ -107,9 +109,9 @@ a{
   background-color: rgba(0, 0, 0, 0.692);
   
     width: 37rem;
-    height: 40.7rem;
-   margin-top: -10.7rem;
-margin-left: -3rem;
+    height: 43.7rem;
+   margin-top: -5.7rem;
+margin-left: -1rem;
 padding-top: 8rem; 
 
 /*margin-bottom: 4rem;
