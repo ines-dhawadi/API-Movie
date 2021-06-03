@@ -21,7 +21,7 @@ left ">
     <ul classclassName="icon-list">
         <li>
       <figure><img className="innnicoon" src="http://digiflex.themezinho.net/wp-content/uploads/2020/11/icon01.png" alt="Access while traveling" /></figure>
-      <div classclassName="content">
+      <div classclassName="content-part">
                 <h4>Access while traveling </h4>
                         <p>Keep access to your entertainment content while roaming the world.Pick from thousands. </p>
               </div>

@@ -29,7 +29,10 @@ function Updat({id,film}) {
         axios.put(`https://movies-762da-default-rtdb.firebaseio.com/posts/${id}.json`, input2)
         .then(response => {
           setInput2( response.data);})
+          .then(response=> window.location.reload())  
       }
+      
+    
       console.log('updaaaaaate', input2)
       
       

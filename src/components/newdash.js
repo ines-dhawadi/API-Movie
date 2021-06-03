@@ -12,7 +12,9 @@ import  {useState} from 'react'
 
 const Newdash = () => {
 
-
+  const refrech=()=>{
+    window.location.reload()
+  }
   return(
     <div>
         <div class="wrapper ">
@@ -84,9 +86,9 @@ const Newdash = () => {
       {/* Navbar */}
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
-          <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:void(0)">Dashboard</a>
-          </div>
+          {/* <div class="navbar-wrapper">
+            <a class="navbar-brand" href="javascript:void(0)"></a>
+          </div> */}
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar"></span>
@@ -146,8 +148,8 @@ const Newdash = () => {
           <div  className="row">
             
 {/* ************* emplacement 1 */}
-<div id="modal-ajout">
-<Cont />
+<div id="modal-ajout" className='mb-5'>
+<Cont refrech={refrech} />
 </div>
 
           </div>
@@ -155,7 +157,7 @@ const Newdash = () => {
           {/* ************* emplacement 2 */}
 
           <Col  >
-          <Dashbord  />
+          <Dashbord   />
           </Col>
           </Row>
           <div className="row  ">

@@ -23,6 +23,8 @@ function Dashbord({handleChanget,input2,favorites}) {
     // }
   const [film, setFilm] = useState([])  
 
+  
+  
   const getFilm=()=>{
     axios.get('https://movies-762da-default-rtdb.firebaseio.com/posts.json').then((response) => {
       setFilm(response.data);
@@ -49,6 +51,8 @@ const deleteRow=(id, e)=>{
     .then(response => {  
       console.log("response:", response);
     }) 
+    .then(response=> window.location.reload()) 
+    
     .catch(err=> 
       console.log(err)
     );
@@ -101,7 +105,7 @@ const deleteRow=(id, e)=>{
          
           <li id="upd-supp" >
            {/* ********************madal updt *********************  */}
-            <Updat  input2={input2} film={film} id={id}  handleChanget={handleChanget}  />
+            <Updat  input2={input2} film={film} id={id}   handleChanget={handleChanget}  />
            
           
      

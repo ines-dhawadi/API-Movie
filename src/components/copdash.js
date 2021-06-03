@@ -21,7 +21,10 @@ setInput(
     [name]:value
 });
 
+
    }
+
+
 //*************add to file json */
 const handleSubmit=(e)=>{
 e.preventDefault()
@@ -29,6 +32,7 @@ console.log('input',input)
 
 axios.post('https://movies-762da-default-rtdb.firebaseio.com/posts.json', input)
 .then((response)=> console.log(response))
+.then(response=> window.location.reload())
 .catch((error)=> console.log('error'))
 
 

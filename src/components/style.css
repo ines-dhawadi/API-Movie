@@ -137,9 +137,9 @@ text-align: center;
     margin-left: 3rem;
 
 }
-span{
+/* span{
     font-size: 3rem;
-}
+} */
 .bbbttt{
 	margin-top: -40rem;
 	
@@ -322,8 +322,8 @@ text-align: center;
 /*----------------------------------------part1*************************/
 .immtttttppp{
     width: 30rem;
-    height: 25rem;
-    margin-left: 5rem;
+    height: 42rem;
+
 }
 
 .pppartfov{
@@ -333,6 +333,9 @@ text-align: center;
    
 }
 
+.content-part{
+    font-size: 14px;
+}
 .content-section {
     width: 100%;
     display: flex;
@@ -387,8 +390,10 @@ li {
     list-style: none;
 }
 .innnicoon{
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
+    
+  
 }
 
 
@@ -436,3 +441,28 @@ li {
       flex-wrap: wrap !important;
       justify-content: space-evenly !important;
   }
+  /*********************favort**********************/
+  .fav--movie--pic {
+    width: 15rem;
+    border-radius: 10px;
+    height: 20rem;
+}
+#titl-fav{
+    color: white;
+   
+}
+#lign-y-r{
+    color: #a5baca !important;
+    text-decoration: underline;
+
+}
+
+.bnt-fav-pag{
+    padding: 4px 10px;
+border: none !important;
+background-color: var(--clr-secondary-redish);
+border-radius: 30%;
+}
+.fa-star{
+    color: yellow;
+}
