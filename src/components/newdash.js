@@ -151,10 +151,10 @@ const Newdash = () => {
 </div>
 
           </div>
-          <Row  className="d-flex justify content-between">
+          <Row  className="d-flex flex-wrap">
           {/* ************* emplacement 2 */}
 
-          <Col md={4} >
+          <Col  >
           <Dashbord  />
           </Col>
           </Row>

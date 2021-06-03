@@ -4,13 +4,13 @@ import  {useState, useEffect} from 'react'
 import { Button, Form,Modal } from "react-bootstrap";
 
 
-function Updat({el}) {
+function Updat({id,film}) {
 
     const[input2,setInput2]=useState(
-        {Title :el.Title,
-        Language:el.Language,
-        Actors:el.Actors,
-        Images :el.Images
+        {Title :film[id].Title,
+        Language:film[id].Language,
+        Actors:film[id].Actors,
+        Images :film[id].Images
     
        }
       )
@@ -26,14 +26,13 @@ function Updat({el}) {
 {/***********function updat  */}
      const updatRow=(id)=> {
 
-        axios.put(`http://localhost:3005/posts/${id}`, input2)
+        axios.put(`https://movies-762da-default-rtdb.firebaseio.com/posts/${id}.json`, input2)
         .then(response => {
           setInput2( response.data);})
       }
       console.log('updaaaaaate', input2)
       
-      useEffect(()=> {updatRow()
-      },[]   )
+      
 /************************function modal */
 const [show, setShow] = useState(false);
 
@@ -63,33 +62,33 @@ const [show, setShow] = useState(false);
 
 <Form.Group controlId="formGroupPassword">
 {/* <Form.Label>Titre de votre film</Form.Label> */}
-<Form.Control   onChange={handleChanget} defaultValue={el.Title} name="Title"  type="text" placeholder="Modifier le titre de votre film" />
+<Form.Control   onChange={handleChanget} defaultValue={film[id].Title} name="Title"  type="text" placeholder="Modifier le titre de votre film" />
 </Form.Group>
 
 
 <Form.Group controlId="formGroupEmail">
 {/* <Form.Label>Langue de votre film</Form.Label> */}
-<Form.Control   onChange={handleChanget} defaultValue={el.Language} name="Language" type="text" placeholder="Modifier la langue de votre film" />
+<Form.Control   onChange={handleChanget} defaultValue={film[id].Language} name="Language" type="text" placeholder="Modifier la langue de votre film" />
 </Form.Group>
 
 
 <Form.Group controlId="formGroupPassword">
 {/* <Form.Label>Acteur  de votre film</Form.Label> */}
-<Form.Control    onChange={handleChanget}  name="Actors" defaultValue={el.Actors} type="text" placeholder="Modifier le nom de votre acteur de film" />
+<Form.Control    onChange={handleChanget}  name="Actors" defaultValue={film[id].Actors} type="text" placeholder="Modifier le nom de votre acteur de film" />
 </Form.Group>
 
 <Form.Group controlId="formGroupPassword">
 {/* <Form.Label>Image</Form.Label> */}
-<Form.Control   onChange={handleChanget}  name="Images" defaultValue={el.Images}  type="text" placeholder="Modifier l'URL de l'image" />
+<Form.Control   onChange={handleChanget}  name="Images" defaultValue={film[id].Images}  type="text" placeholder="Modifier l'URL de l'image" />
 </Form.Group>
-<Button type="submit"  onClick={() =>{ updatRow(el.id)}} > Valider</Button>
+<Button   onClick={() =>updatRow(id)}  > Valider</Button>
 </Form>
 
 
 </div>
 {/* ********************************* */}
     </Modal.Body>
-    <Modal.Footer>
+    {/* <Modal.Footer>
       <Button variant="secondary" onClick={handleClose}>
       
 Fermer
@@ -97,8 +96,8 @@ Fermer
       <Button variant="primary"    onClick={ () =>{ updatRow(el.id);handleClose()}}>
       Modifier
       </Button>
-    </Modal.Footer>
-  </Modal>
+    </Modal.Footer>*/}
+  </Modal> 
 </>
 
 

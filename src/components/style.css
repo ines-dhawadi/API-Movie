@@ -109,7 +109,7 @@ a{
   background-color: rgba(0, 0, 0, 0.692);
   
     width: 37rem;
-    height: 43.7rem;
+    height: 38.7rem;
    margin-top: -5.7rem;
 margin-left: -1rem;
 padding-top: 8rem; 
@@ -397,6 +397,11 @@ li {
     position: relative;
     margin-top: -47rem;
     margin-left: 2rem;
+}
+.freeichom{
+    position: relative;
+    margin-top: -47rem;
+    margin-left: 12rem;
 }
 .playy{
     position: relative;

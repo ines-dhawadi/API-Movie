@@ -60,8 +60,9 @@
   }
   
   a{
-    color: #21229!important;
+    color: #fff !important;
   }
+
   [tabindex="-1"]:focus {
     outline: 0 !important;
   }

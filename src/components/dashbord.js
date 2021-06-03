@@ -12,7 +12,7 @@ import Updat from './updat';
 
 
 
-function Dashbord({handleChanget,el,input2,favorites}) {
+function Dashbord({handleChanget,input2,favorites}) {
 
   
 
@@ -24,8 +24,9 @@ function Dashbord({handleChanget,el,input2,favorites}) {
   const [film, setFilm] = useState([])  
 
   const getFilm=()=>{
-    axios.get('http://localhost:3005/posts').then((response) => {
-      setFilm( response.data);
+    axios.get('https://movies-762da-default-rtdb.firebaseio.com/posts.json').then((response) => {
+      setFilm(response.data);
+      console.log("mchitchi ", response.data)
     });
                          
  }
@@ -44,9 +45,9 @@ function Dashbord({handleChanget,el,input2,favorites}) {
 //****************************delet */
 const deleteRow=(id, e)=>{  
 
-  axios.delete(`http://localhost:3005/posts/${id}`)  
+  axios.delete(`https://movies-762da-default-rtdb.firebaseio.com/posts/${id}.json`)  
     .then(response => {  
-      console.log("response: hahaha", response);
+      console.log("response:", response);
     }) 
     .catch(err=> 
       console.log(err)
@@ -73,13 +74,16 @@ const deleteRow=(id, e)=>{
 
    return(
 
-<div id="row-card-dashb" >
+<div  >
 {/* <Nnabarr handelSearch={handelSearch} favorites={favorites}/>
 <Cont  /> */}
 
-    {
-   film.filter(el=>
-    el.Title.toLowerCase().includes(search.toLowerCase())).map(el=>
+   <div className='d-flex justify-content-around flex-wrap '>
+   {
+  // Object.keys(film).filter(id=>
+  //   film[id].Title.toLowerCase().includes(search.toLowerCase()))
+    
+  Object.keys(film).map(id=>
     <div className="cwartttet">
 
 
@@ -87,17 +91,17 @@ const deleteRow=(id, e)=>{
  
  <div className="card">
     <div className="image">
-      <img  src={el.Images}/>
+      <img  src={film[id].Images}/>
     </div>
     <div className="details">
       <div className="center">
-        <h1>{el.Title}<br></br><span>{el.Actors}</span></h1>
-        <p><b>Language :</b> {el.Language}</p>
+        <h1>{film[id].Title}<br></br><span>{film[id].Actors}</span></h1>
+        <p><b>Language :</b> {film[id].Language}</p>
         <ul >
          
           <li id="upd-supp" >
            {/* ********************madal updt *********************  */}
-            <Updat  input2={input2} el={el} deleteRow={deleteRow} handleChanget={handleChanget}  />
+            <Updat  input2={input2} film={film} id={id}  handleChanget={handleChanget}  />
            
           
      
@@ -107,7 +111,7 @@ const deleteRow=(id, e)=>{
           
           
           
-           <a href="#">  <img  onClick={(e) => deleteRow(el.id, e)} src="./delete.png" />  </a></li>
+           <a href="#">  <img  onClick={() => deleteRow(id)} src="./delete.png" />  </a></li>
         </ul>
         
       </div>
@@ -117,6 +121,7 @@ const deleteRow=(id, e)=>{
     </div>
     
    )}
+   </div>
 {/* ********************New card******************** */}
 
 

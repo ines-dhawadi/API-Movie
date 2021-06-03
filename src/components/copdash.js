@@ -27,7 +27,8 @@ const handleSubmit=(e)=>{
 e.preventDefault()
 console.log('input',input)
 
-axios.post('http://localhost:3005/posts',input).then((response)=> console.log(response))
+axios.post('https://movies-762da-default-rtdb.firebaseio.com/posts.json', input)
+.then((response)=> console.log(response))
 .catch((error)=> console.log('error'))
 
 

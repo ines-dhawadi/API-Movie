@@ -12,8 +12,10 @@ function Film({search,getFavorites,getFavoritMovies}) {
   const [film, setFilm] = useState([])  
 
   const getFilm=()=>{
-    axios.get('http://localhost:3005/posts').then((response) => {
-      setFilm( response.data);
+    
+    axios.get('https://movies-762da-default-rtdb.firebaseio.com/posts.json').then((response) => {
+      setFilm((response.data) );
+      console.log()
     });
                          
  }
@@ -66,8 +68,8 @@ function Film({search,getFavorites,getFavoritMovies}) {
 
    return(
    
-   film.filter(el=>
-    el.Title.toLowerCase().includes(search.toLowerCase())).map(el=>
+    Object.keys(film).filter(id=>
+    film[id].Title.toLowerCase().includes(search.toLowerCase())).map(id=>
     <div className="cwartttet">
 
 
@@ -75,20 +77,21 @@ function Film({search,getFavorites,getFavoritMovies}) {
  
  <div className="card">
     <div className="image">
-      <img  src={el.Images[0]}/>
+      <img  src={film[id].Images[2]}/>
+   
     </div>
     <div className="details">
       <div className="center">
-        <h1>{el.Title}<br></br><span>{el.Actors}</span></h1>
-        <p><b>Language :</b> {el.Language}</p>
+        <h1>{film[id].Title}<br></br><span>{film[id].Actors}</span></h1>
+        <p><b>Language :</b> {film[id].Language}</p>
         <ul >
          
-          <li>Add to  <a href="#"><img  onClick={()=>{getFavorites() ;getFavoritMovies(el)}} src="./heart.png" /></a></li>
+          <li>Add to  <a href="#"><img  onClick={()=>{getFavorites() ;getFavoritMovies(film[id])}} src="./heart.png" /></a></li>
         </ul>
       </div>
     </div>
   </div>
-    
+  <img className="freeichom" src="../images/free.png" />
     </div>
     
    )

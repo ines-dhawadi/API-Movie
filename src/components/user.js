@@ -23,7 +23,7 @@ const User = (props) => {
       <div class="sidebar-wrapper">
         <ul class="nav">
         <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboard.html"><Link to="/Dashb">
+            <a class="nav-link" ><Link to="/Dashb">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
               </Link> </a>
