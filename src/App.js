@@ -58,7 +58,10 @@ const DeleteFavoritMovie=(index)=>{
   newList.splice(index,1);
   setFavoritMovie([...newList])
 }
-
+/*********************Function RemoveAllFavorite */
+const RemoveAllFavorite=()=>{
+  setFavoritMovie(0)
+}
   return (
       <div className="App">
 
@@ -67,7 +70,7 @@ const DeleteFavoritMovie=(index)=>{
 <Route exact path="/"   ><Home favorites={favorites} getFavorites={getFavorites} getFavoritMovies={getFavoritMovies} /> </Route>
 {/* <Route  path="/"  component={non de componen} /> */}
 <Route path="/About"> < About/></Route>
-<Route  path="/favored"   > <Favor  DeleteFavoritMovie={ DeleteFavoritMovie} favorites={favorites} favoritMovie={favoritMovie} getFavoritMovies={getFavoritMovies} /> </Route>
+<Route  path="/favored"   > <Favor  RemoveAllFavorite={RemoveAllFavorite} DeleteFavoritMovie={ DeleteFavoritMovie} favorites={favorites} favoritMovie={favoritMovie} getFavoritMovies={getFavoritMovies} /> </Route>
 
 {/* <Route path="/admin" ><Dashbord favorites={favorites} handleChange={handleChange} search={search} film={film}/></Route> */}
 {/* <Route path="/dachbord"><Dashbord favorites={favorites} handleChange={handleChange} search={search} film={film}/> </Route> */}

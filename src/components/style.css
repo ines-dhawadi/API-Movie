@@ -465,6 +465,17 @@ border-radius: 25px;
 color: white;
 margin-top: 3rem;
 }
+
+.bnt-RemoveAllFavorite {
+    padding: 4px 10px;
+    border: none !important;
+    background-color: var(--clr-secondary-redish);
+    border-radius: 25px;
+    color: white;
+    margin-top: 3rem;
+    margin-left: 60rem;
+
+}
 .fa-star{
     color: yellow;
 }

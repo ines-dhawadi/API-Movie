@@ -8,7 +8,7 @@ import Footer2 from './Footer2';
 import Rater from 'react-rater'
 import 'react-rater/lib/react-rater.css'
 
-const Favor = ({favoritMovie,DeleteFavoritMovie, favorites, handelSearch}) => {
+const Favor = ({favoritMovie,DeleteFavoritMovie,RemoveAllFavorite, favorites, handelSearch}) => {
 
 /*******************delet favoritMovie */
 
@@ -20,6 +20,8 @@ const Favor = ({favoritMovie,DeleteFavoritMovie, favorites, handelSearch}) => {
   return(
     <div>
        <Nnabarr   handelSearch={handelSearch} favorites={favorites}/>
+
+       <button className="bnt-RemoveAllFavorite " onClick={RemoveAllFavorite}>Remove All</button>
        {/* <Part11 /> */}
 
        <div className="container d-flex flex-wrap mt-5">
