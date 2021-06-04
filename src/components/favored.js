@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Part11 from './Part1';
 import Nnabarr from './navbatt';
 import  "../components/style.css";
 import { Row,Col } from 'react-bootstrap';
 import Footer from "./footer";
 import Footer2 from './Footer2';
+import Rater from 'react-rater'
+import 'react-rater/lib/react-rater.css'
 
-const Favor = ({favoritMovie, favorites, handelSearch}) => {
+const Favor = ({favoritMovie,DeleteFavoritMovie, favorites, handelSearch}) => {
+
+/*******************delet favoritMovie */
+
+
+
+
+
+
   return(
     <div>
        <Nnabarr   handelSearch={handelSearch} favorites={favorites}/>
@@ -49,7 +59,7 @@ const Favor = ({favoritMovie, favorites, handelSearch}) => {
                    <h2 id="titl-fav">{favoritMovie[el].Title}</h2>
                    <span id="lign-y-r">{favoritMovie[el].Year} | {favoritMovie[el].Runtime} | {favoritMovie[el].Genre}</span>
                    <div>
-                      <span><i class="fas fa-star"></i>  &nbsp; {favoritMovie[el].Rate}</span>
+                      <span><Rater id="retiong" total={10} rating={favoritMovie[el].imdbRating} />  &nbsp; {favoritMovie[el].Rate}</span>
                       <span>{favoritMovie[el].Metascore}</span> &nbsp; &nbsp; 
                       <spann>Metascore</spann>
                    </div>
@@ -65,7 +75,7 @@ const Favor = ({favoritMovie, favorites, handelSearch}) => {
                    <span>
                    {/* callback */}
                    {/* <button onClick={()=>removeFromWishlist(element)}>Remove from your Wishlist</button> */}
-                   <button  className="bnt-fav-pag ml-2">Watch</button>
+                   <button onClick={DeleteFavoritMovie} className="bnt-fav-pag ml-2">Remove from your favorite list</button>
                    </span>
                 </Col>
             </Row>
