@@ -2,6 +2,8 @@ import  {useState, useEffect} from 'react'
 import '../components/style.css'
 import {Button} from 'react-bootstrap'
 import axios from "axios"
+import Rater from 'react-rater'
+import 'react-rater/lib/react-rater.css'
 
 
 
@@ -84,13 +86,16 @@ function Film({search,getFavorites,getFavoritMovies}) {
       <div className="center">
         <h1>{film[id].Title}<br></br><span>{film[id].Actors}</span></h1>
         <p><b>Language :</b> {film[id].Language}</p>
+        <Rater id="retiong" total={10} rating={film[id].imdbRating} />
         <ul >
          
           <li>Add to  <a href="#"><img  onClick={()=>{getFavorites() ;getFavoritMovies(film[id])}} src="./heart.png" /></a></li>
         </ul>
       </div>
     </div>
+
   </div>
+  
   <img className="freeichom" src="../images/free.png" />
     </div>
     

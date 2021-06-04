@@ -17,7 +17,7 @@ function Nnabarr({handelSearch,favorites}) {
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
       <Link   to="/">Home</Link>
-      <Link to="/about">About</Link>
+      <Link to="/About">About</Link>
        <Link to="/favored"><img src="./heart.png" /> <span className="val-favorite"> {favorites}</span></Link>
       
     </Nav>
@@ -39,8 +39,9 @@ function Nnabarr({handelSearch,favorites}) {
 </Navbar>
 
 <div className="grantitre">
-    <p  className="titre"> <span>This site  offers <br></br>a list of 1150  </span>   </p> <br></br> 
-    <Button className="bbbttt" variant="light">Light</Button>
+    <p  className="titre"> <span>This site  offers <br></br>a list of 1150  </span>  <p id="parg-top-hom-ptit">Actor The Concept Movie High Concept <br></br> Theory see the post</p>  </p> <br></br> 
+    {/* <Button className="bbbttt" variant="light">Light</Button> */}
+   
   </div>
  
     </div>

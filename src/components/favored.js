@@ -4,12 +4,13 @@ import Nnabarr from './navbatt';
 import  "../components/style.css";
 import { Row,Col } from 'react-bootstrap';
 import Footer from "./footer";
+import Footer2 from './Footer2';
 
 const Favor = ({favoritMovie, favorites, handelSearch}) => {
   return(
     <div>
        <Nnabarr   handelSearch={handelSearch} favorites={favorites}/>
-       <Part11 />
+       {/* <Part11 /> */}
 
        <div className="container d-flex flex-wrap mt-5">
        {
@@ -76,7 +77,7 @@ const Favor = ({favoritMovie, favorites, handelSearch}) => {
        }
 
 </div>
-       
+       <Footer2/>
    <Footer />     
     </div>
    )

@@ -13,6 +13,7 @@ import { useState} from "react";
 // import Dashb from "./components/Dash1";
 import Newdash from "./components/newdash";
 import User from './components/user';
+import About from "./components/About";
 
 
 
@@ -55,9 +56,10 @@ console.log(favoritMovie)
       <div className="App">
 
 <Router>
- 
+
 <Route exact path="/"   ><Home favorites={favorites} getFavorites={getFavorites} getFavoritMovies={getFavoritMovies} /> </Route>
 {/* <Route  path="/"  component={non de componen} /> */}
+<Route path="/About"> < About/></Route>
 <Route  path="/favored"   > <Favor favorites={favorites} favoritMovie={favoritMovie} getFavoritMovies={getFavoritMovies} /> </Route>
 
 {/* <Route path="/admin" ><Dashbord favorites={favorites} handleChange={handleChange} search={search} film={film}/></Route> */}

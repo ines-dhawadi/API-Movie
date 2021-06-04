@@ -89,7 +89,7 @@ const [show, setShow] = useState(false);
 </div>
 {/* ********************************* */}
         </Modal.Body>
-        <Modal.Footer>
+        {/* <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
           
 Fermer
@@ -97,7 +97,7 @@ Fermer
           <Button variant="primary" onClick={handleClose}>
           Ajouter
           </Button>
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
     </>
  

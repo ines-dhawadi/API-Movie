@@ -105,7 +105,11 @@ const deleteRow=(id, e)=>{
          
           <li id="upd-supp" >
            {/* ********************madal updt *********************  */}
-            <Updat  input2={input2} film={film} id={id}   handleChanget={handleChanget}  />
+
+           <div id="icon-updat">
+           <Updat  input2={input2} film={film} id={id}   handleChanget={handleChanget}  />
+           </div>
+           
            
           
      
@@ -115,7 +119,7 @@ const deleteRow=(id, e)=>{
           
           
           
-           <a href="#">  <img  onClick={() => deleteRow(id)} src="./delete.png" />  </a></li>
+           <a href="#">  <img  id="icon-supp" onClick={() => deleteRow(id)} src="./delete.png" />  </a></li>
         </ul>
         
       </div>
