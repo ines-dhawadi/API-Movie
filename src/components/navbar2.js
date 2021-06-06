@@ -1,4 +1,3 @@
-
 import  "../components/style.css";
 import { Navbar,FormControl,Button,Nav,Form } from "react-bootstrap";
 import {Link} from "react-router-dom"
@@ -9,7 +8,7 @@ import React, { useEffect,useState } from 'react';
 
 
 
-function Nnabarr({handelSearch,favorites}) {
+function Nnabar2({handelSearch,favorites}) {
  
 
   //******************************firebase AUth */
@@ -36,7 +35,7 @@ useEffect(() => {
 
   return(
     <div>
-    <div className=" container-fluid col-md-12 navvvv">
+    <div className=" container-fluid col-md-12 ">
         <Navbar bg="light" expand="lg">
   <Navbar.Brand href="#home"><img className="logo" src="https://baptistedrapeau.files.wordpress.com/2019/02/logo-cave-c3a0-film-rond-blanc-noir.png" /></Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -44,7 +43,7 @@ useEffect(() => {
     <Nav className="mr-auto">
       <Link   to="/">Home</Link>
       <Link to="/About">About</Link>
-       <Link to="/favored"><img src="./heart.png" /> <span className="val-favorite"> {favorites}</span></Link>
+       <Link to="/favored"><img src="./heart.png" /> </Link>
       
     </Nav>
     {/* <Form inline>
@@ -64,21 +63,7 @@ useEffect(() => {
   </Navbar.Collapse>
 </Navbar>
 
-<div className="grantitre">
-    <p  className="titre"> <span>This site  offers <br></br>a list of 1150  </span>  <p id="parg-top-hom-ptit">Actor The Concept Movie High Concept <br></br> Theory see the post</p>  </p> <br></br> 
-    {/* <Button className="bbbttt" variant="light">Light</Button> */}
-    
-    {/* /************ button Sign up  */}
-    <div className="button-Sign-up">
-    <SignUpForm />
-   
 
-    < SignInForm/>
-
-    </div>
-   
-   
-  </div>
  
     </div>
 
@@ -86,4 +71,4 @@ useEffect(() => {
 
  }
 
-export default Nnabarr 
+export default Nnabar2 

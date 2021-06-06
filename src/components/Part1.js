@@ -8,7 +8,7 @@ function Part11() {
 
   return(
     <div className="container-fluid">
-        <div className=" row pppartfov">
+        <div id="pppartfov" className=" row ">
             <div className="col-md-6"><img className="immtttttppp" src="http://digiflex.themezinho.net/wp-content/uploads/2020/12/side-image01.png" alt="Image" /></div>
 
 <div className="col-md-6 ooooooffff">

@@ -23,6 +23,29 @@ margin-bottom: 5rem;
 
 }
 
+.button-Sign-up{
+    margin-top: -20rem;
+    margin-left: 4.5rem;
+   
+}
+.bg-modal{
+    background-image: url('https://images-na.ssl-images-amazon.com/images/M/MV5BNjM4MzExNDAyNl5BMl5BanBnXkFtZTgwOTAxMTc1ODE@._V1_SX1777_CR0,0,1777,744_AL_.jpg');
+box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.651);
+
+}
+#modal-title{
+    color:  #e90101  !important;
+}
+#bnt-sign{
+    margin-left: 15rem;
+}
+.bg-gr-modal{
+    background-color: rgba(255, 255, 255, 0.568);
+}
+#style-Button-sign-up{
+    border-radius: 25px;
+}
+
 .imgfilm{
     width: 20rem;
 height: 15rem;
@@ -114,6 +137,15 @@ padding-top: 8rem;
 /*margin-bottom: 4rem;
 padding-right: -5rem;*/
 text-align: center;
+}
+
+.grantitre-about{
+font-size: 1.5rem;
+color: white;
+margin-top: -5.7rem;
+padding-top: 8rem; 
+
+
 }
 
 
@@ -325,10 +357,13 @@ text-align: center;
 
 }
 
-.pppartfov{
-    background-color: white;
+#pppartfov{
+   background-color: white;
+    /* background: linear-gradient(to right, white, black); */
     justify-content: space-around;
-    width: 100%;
+ padding: 3rem;
+    width: 80%;
+ margin-left: 7.5rem;
    
 }
 
@@ -567,6 +602,13 @@ margin-top: 3rem;
    
 }
 /*********************** part3  about ********************/
+.bg-navbar-about{
+    background-image: url('https://images-na.ssl-images-amazon.com/images/M/MV5BNjM4MzExNDAyNl5BMl5BanBnXkFtZTgwOTAxMTc1ODE@._V1_SX1777_CR0,0,1777,744_AL_.jpg');
+height: 40rem;
+width: 100%;
+
+
+}
 .parg-1-part3-about{
     color: #e90101;
   
@@ -590,7 +632,7 @@ margin-top: 3rem;
   }
   .react-rater-star {
     cursor: pointer;
-    color: rgb(131, 127, 26) !important;
+    color: white !important;
     font-size: 1.5rem !important;
     position: relative;
   }
@@ -612,6 +654,7 @@ margin-top: 3rem;
 
   .part3-about-totl{
       margin-top: 7rem;
+      margin-bottom: 7rem;
       /* margin-bottom: 5rem; */
   }
 

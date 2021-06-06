@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Part11 from './Part1';
-import Nnabarr from './navbatt';
+import Nnabar2 from './navbar2';
 import  "../components/style.css";
 import { Row,Col } from 'react-bootstrap';
 import Footer from "./footer";
@@ -19,7 +19,8 @@ const Favor = ({favoritMovie,DeleteFavoritMovie,RemoveAllFavorite, favorites, ha
 
   return(
     <div>
-       <Nnabarr   handelSearch={handelSearch} favorites={favorites}/>
+       
+       <Nnabar2 />
 
        <button className="bnt-RemoveAllFavorite " onClick={RemoveAllFavorite}>Remove All</button>
        {/* <Part11 /> */}
